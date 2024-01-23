@@ -48,6 +48,7 @@ CREATE TABLE categories (
     description string
 );
 ```
+Now, when you run the server, it will connect to this SQLite database.
 
 ### Running the Server
 
@@ -56,6 +57,8 @@ To start the gRPC server, run:
 ```
 go run cmd/grpcServer/main.go
 ```
+The server will start and listen for connections.
+
 
 ### Interacting with the Server using Evans
 
@@ -64,10 +67,8 @@ go run cmd/grpcServer/main.go
 ```
 evans -r repl -p 50051 pb CategoryService
 ```
+You can now use Evans to send requests to your `CategoryService`. For example, to call a `ListCategories` method, you would type `call ListCategories` in the Evans prompt.
 
-7. You can now use Evans to send requests to your `CategoryService`. For example, to call a `ListCategories` method, you would type `call ListCategories` in the Evans prompt.
-
-The server will start and listen for connections.
 
 ## Built With
 
