@@ -11,30 +11,34 @@ These instructions will get you a copy of the project up and running on your loc
 - Go 1.16 or later
 - SQLite3
 - Protocol Buffers compiler (`protoc`)
+- gRPC
 
 ### Installing
 
 1. Clone the repository:
 
-git clone https://github.com/RaphaelMarquesMartorella/gRPC.git
+``` 
+git clone https://github.com/RaphaelMarquesMartorella/gRPC-go.git
+```
 
 2. Navigate to the project directory:
 
-cd gRPC
-
+```
+cd gRPC-go
+```
 3. Install the required Go packages:
 
+```
 go mod download
-
-4. Compile the Protocol Buffers definitions:
-
+```
 
 ### Running the Server
 
 To start the gRPC server, run:
 
-go run main.go
-
+```
+go run cmd/grpcServer/main.go
+```
 
 The server will start and listen for connections.
 
@@ -46,7 +50,7 @@ The server will start and listen for connections.
 
 ## Authors
 
-- **Raphael Marques Martorella** - *Initial work*
+- **Raphael Marques Martorella** - *Initial work* - This project was created while following along with the Full Cycle course.
 
 ## License
 
